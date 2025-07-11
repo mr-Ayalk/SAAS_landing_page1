@@ -8,7 +8,7 @@ const classes = cva("border  h-12 rounded-full px-6 font-medium", {
             secondary: "border-white text-white bg-transparent",
         },
         size: {
-            sm: "h-10,",
+            sm: "h-10",
         },
     },
 });
