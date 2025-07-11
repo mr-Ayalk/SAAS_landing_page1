@@ -23,7 +23,7 @@ export default function Navbar() {
                         />
                     </div>
 
-                    <div className="flex justify-center items-center">
+                    <div className="lg:flex  justify-center items-center hidden">
                         <nav className="flex gap-6 font-medium">
                             {navLinks.map((link) => (
                                 <a href={link.href} key={link.label}>
@@ -33,7 +33,7 @@ export default function Navbar() {
                         </nav>
                     </div>
 
-                    <div className="lg:flex justify-end gap-4 hidden">
+                    <div className="flex justify-end gap-4">
                         <Image
                             src={HambergerMenu}
                             alt=""
