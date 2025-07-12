@@ -5,7 +5,8 @@ import avatar2 from "@/assets/images/avatar-lula-meyers.jpg";
 import avatar3 from "@/assets/images/avatar-florence-shaw.jpg";
 import Image from "next/image";
 import Avatar from "@/components/Avatar";
-import { span } from "framer-motion/client";
+
+import Key from "@/components/key";
 const features = [
     "Asset Library",
     "Code Preview",
@@ -24,16 +25,20 @@ export default function Features() {
                     <Tag>Features</Tag>
                 </div>
 
-                <h2 className="text-6xl font-medium text-center mt-6">
+                <h2 className="text-6xl font-medium text-center mt-6 max-w-2xl mx-auto">
                     Where power meets{" "}
                     <span className="text-lime-400">simplicity</span>
                 </h2>
 
-                <div className="mt-12 grid grid-cols-1 gap-8 ">
+                <div
+                    className="mt-12 grid grid-cols-1
+                md:grid-cols-4 lg:grid-cols-3  gap-8 "
+                >
                     <FeatureCard
                         title="Real-time"
                         description="    Work together seamleassly with conflict-free
                                 team editing "
+                        className="md:col-span-2 lg:col-span-1"
                     >
                         <div className="aspect-video flex items-center justify-center">
                             <Avatar className=" z-40">
@@ -74,6 +79,7 @@ export default function Features() {
                     <FeatureCard
                         title="Interactive Protyping"
                         description=" Engage your clients with prototypes that react to user actions "
+                        className="md:col-span-2 lg:col-span-1"
                     >
                         <div className="aspect-video flex items-center justify-center">
                             <p className="text-4xl font-extrabold text-white/20  text-center">
@@ -90,14 +96,28 @@ export default function Features() {
                         title="Keyboard Quick Actions"
                         description="Powerful commands to help you create designs
                         more quickly "
-                    />
+                        className="md:col-span-2 lg:col-span-1 md:col-start-2 lg:col-start-auto"
+                    >
+                        <div className="aspect-video flex  justify-center items-center gap-4">
+                            <Key className="w-28">shift</Key>
+                            <Key>alt</Key>
+                            <Key>C</Key>
+                        </div>
+                    </FeatureCard>
                 </div>
 
-                <div className="">
+                <div className="mt-8 flex flex-wrap gap-3 justify-center">
                     {features.map((feature) => (
-                        <div className="" key={feature}>
-                            <span></span>
-                            <span>{feature}</span>
+                        <div
+                            className="bg-neutral-900 border border-neutral-900 border-white/10 inline-flex px-3 md:px-5 py-1.5 md:py-2 rounded-2xl gap-3 items-center"
+                            key={feature}
+                        >
+                            <span className="bg-lime-400 text-neutral-950 size-5 rounded-full inline-flex justify-center items-center text-xl">
+                                &#10038;
+                            </span>
+                            <span className="font-medium md:text-lg">
+                                {feature}
+                            </span>
                         </div>
                     ))}
                 </div>
