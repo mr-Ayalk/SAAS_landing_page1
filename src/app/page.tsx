@@ -1,3 +1,4 @@
+import Features from "@/sections/Features";
 import Hero from "@/sections/Hero";
 import Introduction from "@/sections/Introduction";
 import LogoTicker from "@/sections/LogoTicker";
@@ -8,8 +9,9 @@ export default function Home() {
         <>
             <Navbar />
             <Hero />
-            <LogoTicker/>
-            <Introduction/>
+            <LogoTicker />
+            <Introduction />
+            <Features />
         </>
     );
 }
