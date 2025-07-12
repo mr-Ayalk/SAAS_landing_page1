@@ -3,6 +3,7 @@ import Tag from "@/components/tag";
 import avatar1 from "@/assets/images/avatar-ashwin-santiago.jpg";
 import avatar2 from "@/assets/images/avatar-lula-meyers.jpg";
 import avatar3 from "@/assets/images/avatar-florence-shaw.jpg";
+import avatar4 from "@/assets/images/avatar-owen-garcia.jpg";
 import Image from "next/image";
 import Avatar from "@/components/Avatar";
 
@@ -38,7 +39,7 @@ export default function Features() {
                         title="Real-time"
                         description="    Work together seamleassly with conflict-free
                                 team editing "
-                        className="md:col-span-2 lg:col-span-1"
+                        className="md:col-span-2 lg:col-span-1 group"
                     >
                         <div className="aspect-video flex items-center justify-center">
                             <Avatar className=" z-40">
@@ -63,8 +64,17 @@ export default function Features() {
                                 />
                             </Avatar>
 
-                            <Avatar className="-ml-6 border-transparent ">
-                                <div className="size-full bg-neutral-700 rounded-full inline-flex items-center justify-center gap-1">
+                            <Avatar className="-ml-6 border-transparent group-hover:border-green-500 transition ">
+                                <div className="size-full bg-neutral-700 rounded-full inline-flex items-center justify-center gap-1 relative">
+                                    <Image
+                                        src={avatar4}
+                                        alt="avator 4
+                                    
+                                    "
+                                        className="absolute size-full
+                                        rounded-full opacity-0 group-hover:opacity-100 transition"
+                                    />
+
                                     {Array.from({ length: 3 }).map((_, i) => (
                                         <span
                                             key={i}
@@ -79,13 +89,23 @@ export default function Features() {
                     <FeatureCard
                         title="Interactive Protyping"
                         description=" Engage your clients with prototypes that react to user actions "
-                        className="md:col-span-2 lg:col-span-1"
+                        className="md:col-span-2 lg:col-span-1 group"
                     >
                         <div className="aspect-video flex items-center justify-center">
-                            <p className="text-4xl font-extrabold text-white/20  text-center">
+                            <p className="text-4xl font-extrabold text-white/20 group-hover:text-white/10 transition  n duration-500 text-center">
                                 We&apos;ve achieved{" "}
-                                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                                    incredible
+                                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent relative">
+                                    <span> incredible</span>
+                                    <video
+                                        src="/gif-incredible.mp4"
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                        className="absolute bottom-full left-1/2 -translate-x-1/2 rounded-2xl shadow-xl opacity-0
+                                        group-hover:opacity-100  transition duration-500
+                                        pointer-events-none"
+                                    />
                                 </span>{" "}
                                 growth this year.
                             </p>
@@ -96,12 +116,18 @@ export default function Features() {
                         title="Keyboard Quick Actions"
                         description="Powerful commands to help you create designs
                         more quickly "
-                        className="md:col-span-2 lg:col-span-1 md:col-start-2 lg:col-start-auto"
+                        className="md:col-span-2 lg:col-span-1 md:col-start-2 lg:col-start-auto group"
                     >
                         <div className="aspect-video flex  justify-center items-center gap-4">
-                            <Key className="w-28">shift</Key>
-                            <Key>alt</Key>
-                            <Key>C</Key>
+                            <Key className="w-28 outline outline-offset-4 outline-transparent outline-2 group-hover:outline-lime-400  transition-all group-hover:translate-y-1">
+                                shift
+                            </Key>
+                            <Key className="outline outline-offset-4 outline-transparent outline-2 group-hover:outline-lime-400  transition-all group-hover:translate-y-1 delay-150">
+                                alt
+                            </Key>
+                            <Key className=" outline outline-offset-4 outline-transparent outline-2  transition-all group-hover:outline-lime-400 group-hover:translate-y-1 delay-300">
+                                C
+                            </Key>
                         </div>
                     </FeatureCard>
                 </div>
@@ -109,10 +135,10 @@ export default function Features() {
                 <div className="mt-8 flex flex-wrap gap-3 justify-center">
                     {features.map((feature) => (
                         <div
-                            className="bg-neutral-900 border border-neutral-900 border-white/10 inline-flex px-3 md:px-5 py-1.5 md:py-2 rounded-2xl gap-3 items-center"
+                            className="bg-neutral-900 border border-neutral-900 border-white/10 inline-flex px-3 md:px-5 py-1.5 md:py-2 rounded-2xl gap-3 items-center hover:scale-105 transition duration-500 group"
                             key={feature}
                         >
-                            <span className="bg-lime-400 text-neutral-950 size-5 rounded-full inline-flex justify-center items-center text-xl">
+                            <span className="bg-lime-400 text-neutral-950 size-5 rounded-full inline-flex justify-center items-center text-xl group-hover:rotate-45 transition duration-500">
                                 &#10038;
                             </span>
                             <span className="font-medium md:text-lg">

@@ -51,7 +51,7 @@ export default function Introduction() {
                         </span>
                     </div>
                 </div>
-                <div className="h-[50vh]" ref={scrollTarget}></div>
+                <div className="h-[150vh]" ref={scrollTarget}></div>
             </div>
         </section>
     );
