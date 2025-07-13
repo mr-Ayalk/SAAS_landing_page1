@@ -11,7 +11,7 @@ export default function CallToAction() {
         animation.current = animate(
             scope.current,
             { x: "-50%" },
-            { duration: 30, ease: "linear", repeat: Infinity }
+            { duration: 10, ease: "linear", repeat: Infinity }
         );
     }, []);
     useEffect(() => {
@@ -32,7 +32,7 @@ export default function CallToAction() {
                     onMouseLeave={() => setIsHovered(false)}
                 >
                     {Array.from({ length: 10 }).map((_, i) => (
-                        <div key={i} className="flex items-center gap-16 pr-16">
+                        <div key={i} className="flex items-center gap-8 ">
                             <span className="text-lime-400 text-7xl">
                                 &#10038;
                             </span>
